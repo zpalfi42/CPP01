@@ -3,19 +3,19 @@
 
 /*
 *   In order to comprove if the zombies are stored in the heap or the stack, uncomment the following functions.
-// void    *bottom_heap;
-// void    bottomheap_init( void )
-// {
-//     bottom_heap = std::malloc(sizeof(int));
-// }
-// void    heap_stack(void *p)
-// {
-//     int bottom_stack;
-//     if (p > &bottom_stack || p < bottom_heap)
-//         std::cout << "Stack memory\n";
-//     else
-//         std::cout << "Heap memory\n";
-// }
+* void    *bottom_heap;
+* void    bottomheap_init( void )
+* {
+*     bottom_heap = std::malloc(sizeof(int));
+* }
+* void    heap_stack(void *p)
+* {
+*     int bottom_stack;
+*     if (p > &bottom_stack || p < bottom_heap)
+*         std::cout << "Stack memory\n";
+*     else
+*         std::cout << "Heap memory\n";
+* }
 *
 *   And add this lines in the main()
 *       bottomheap_init(); at the start;
