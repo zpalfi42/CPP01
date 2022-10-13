@@ -6,7 +6,7 @@
 /*   By: zpalfi <zpalfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:38:29 by zpalfi            #+#    #+#             */
-/*   Updated: 2022/10/13 14:53:48 by zpalfi           ###   ########.fr       */
+/*   Updated: 2022/10/13 15:07:36 by zpalfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ int main()
         zombies[i].announce();
         i++;
     }
-    delete[] zombies;
+    // delete[] zombies;
     return (0);
 }
