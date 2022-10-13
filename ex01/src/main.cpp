@@ -1,25 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zpalfi <zpalfi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/13 14:38:29 by zpalfi            #+#    #+#             */
+/*   Updated: 2022/10/13 14:53:48 by zpalfi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Zombie.hpp"
-
-void    namesFill(std::string   *names, int N)
-{
-    int i;
-
-    i = 0;
-    while (i < N)
-    {
-        while (42)
-        {
-            std::cout << "Name zombie number " << i << ": ";
-            std::getline(std::cin, names[i]);
-            if (names[i].empty())
-                continue;
-            else
-                break ;
-        }
-        std::cout << "amount[N]: " << names[i] << std::endl;
-        i++;
-    }
-}
 
 int    getN( void )
 {
@@ -55,23 +46,39 @@ int    getN( void )
     return (0);
 }
 
+std::string getName( void )
+{
+    std::string name;
+    
+    while (42)
+    {
+        std::cout << "Name the zombies: ";
+        std::getline(std::cin, name);
+        if (name.empty())
+            continue;
+        else
+            break ;
+    }
+    return (name);
+}
+
 int main()
 {
-    typedef std::vector<Zombie::v>	zombie_v;
-    int						N;
+    Zombie      *zombies;
+    std::string name;
+    int		    N;
+    int		    i;
 
     N = getN();
-    std::string names[N];
+    name = getName();
+	zombies = zombieHorde(N, name);
 
-    namesFill(names, N);
-    size_t const	names_size( sizeof(names) / sizeof(std::string) );
-    zombie_v		zombies(names, names + names_size);
-
-    // i = 0;
-    // while (i < N)
-    // {
-    //     zombies[i].displayName();
-    //     i++;
-    // }
+    i = 0;
+    while (i < N)
+    {
+        zombies[i].announce();
+        i++;
+    }
+    delete[] zombies;
     return (0);
 }

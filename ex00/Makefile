@@ -3,7 +3,7 @@ NAME			=	Zombie
 SRC_DIR		=	./src/
 OBJ_DIR		=	obj/
 
-INCS_DIR	=	includes
+INCS_DIR	=	./includes
 MAIN_INC	= -I $(INCS_DIR)
 INCS		=	$(shell find $(INCS_DIR) -type f -name "*.hpp")
 

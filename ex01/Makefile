@@ -1,4 +1,4 @@
-NAME			=	Zombie
+NAME			=	ZombieHorde
 
 SRC_DIR		=	./src/
 OBJ_DIR		=	obj/
