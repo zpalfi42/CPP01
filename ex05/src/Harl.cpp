@@ -1,5 +1,12 @@
 #include "Harl.hpp"
-#include <iostream>
+
+Harl::Harl(/* args */)
+{
+}
+
+Harl::~Harl()
+{
+}
 
 void	Harl::debug( void )
 {
@@ -23,5 +30,12 @@ void	Harl::error( void )
 
 void	Harl::complain( std::string level )
 {
-
+	std::string	s[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void (Harl::*p[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	int	i = 0;
+	
+	while (i < 4 && s[i].compare(level) != 0)
+		i++;
+	if (i < 4)
+		(this->*p[i])();
 }
