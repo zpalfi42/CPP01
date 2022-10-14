@@ -12,7 +12,7 @@ HumanB::~HumanB()
 
 void    HumanB::attack( void )
 {
-    if (this->weapon == NULL)
+    if (this->weapon == NULL || this->weapon->getType().empty())
         std::cout << this->name << " has no weapon :(" << std::endl;
     else
         std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
