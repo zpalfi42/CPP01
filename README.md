@@ -16,18 +16,45 @@ This zombie class will follow the next instrucctions:
 - - Zombie* newZombie( std::string name );
     It creates a zombie, name it, and return the zombie object.
 - - void  randomChump( std::string name );
+    It creates a zombie, name it, and the ombie announces itself.
 
-**Files**:
+The point of this exercices is to learn about allocation in the stack or the heap. 
 
-**Forbidden functions**:
+**Files**: [`Makefile`](./ex00/Makefile), [`main.cpp`](./ex00/src/main.cpp), [`Zombie.cpp`](./ex00/src/Zombie.cpp), [`newZombie.cpp`](./ex00/src/newZombie.cpp), [`randomChump.cpp`](./ex00/src/randomChump.cpp), [`Zombie.hpp`](./ex00/includes/Zombie.hpp)
+
+**Forbidden functions**: None
+
+**Example of how it works**:
+
+<p align="center">
+  <a align="center">
+    <img src="./Resources/ex00.png" width="80%">
+  </a>
+</p>
 
 ## Exercise 01: Moar brainz!
 
-**Objective**:
+**Objective**: In this exercise we will have to implement a **horde of Zombies!**
 
-**Files**:
+To do this we will have tom implement the following function:
 
-**Forbidden functions**:
+    Zombie* zombieHorde( int N, std::string name );
+    
+Where ***N*** is the number of Zombies objects we must allocate in a single allocation and initializes the zombies giving the name passed as a parameter. Th function must return a pointer to the first zombie.
+
+The point of this exercise is to clean and check all the memory leaks.
+
+**Files**: [`Makefile`](./ex01/Makefile), [`main.cpp`](./ex01/src/main.cpp), [`Zombie.cpp`](./ex01/src/Zombie.cpp), [`zombieHorde.cpp`](./ex01/src/zombieHorde.cpp), [`Zombie.hpp`](./ex01/includes/Zombie.hpp)
+
+**Forbidden functions**: None
+
+**Example of how it works**:
+
+<p align="center">
+  <a align="center">
+    <img src="./Resources/ex01.png" width="40%">
+  </a>
+</p>
 
 ## Exercise 02: HI THIS IS BRAIN
 
