@@ -58,23 +58,73 @@ The point of this exercise is to clean and check all the memory leaks.
 
 ## Exercise 02: HI THIS IS BRAIN
 
-**Objective**:
+**Objective**: The objective of this exercice is to learn the difference between references and addres pointers.
 
-**Files**:
+We must write a program that contains:
 
-**Forbidden functions**:
+- A string initialized to "HI THIS IS BRAIN".
+- stringPTR: A pointer to the string.
+- stringREF: A reference to the string.
+
+The program has to print:
+
+- The memory address of the string variable.
+- The memory address held by stringPTR.
+- The memory address held by stringREF.
+- The value of the string variable.
+- The value pointed to by stringPTR.
+- The value pointed to by stringREF.
+
+**Files**: [`Makefile`](./ex02/Makefile), [`main.cpp`](./ex02/main.cpp)
+
+**Forbidden functions**: None
+
+**Example of how it works**:
+
+<p align="center">
+  <a align="center">
+    <img src="./Resources/ex02.png" width="80%">
+  </a>
+</p>
 
 ## Exercise 03: Unnecessary violence
 
-**Objective**:
+**Objective**: The objective of this exercice is to learn how to implement pointers and references and which one is best for some determinated situations.
 
-**Files**:
+First we need to implement a [**Weapon**](./ex03/include/Weapon.hpp) class. This class needs:
 
-**Forbidden functions**:
+- A private string **type**.
+- A **getType()** member function that returns a const reference to **type**.
+- A **setType()** member function that sets **type** using the new one passed as a parameter.
+
+Then we have to implement two more classes: [**HumanA**](./ex03/include/HumanA.hpp) and [**HumanB**](./ex03/include/HumanB.hpp). Those classes need:
+
+- A **Weapon**.
+- A private string **name**.
+- A **attack()** member function that displays the following message:
+
+      <name> attacks with their <weapon type>.
+      
+**HumanA** and **HumanB** are almost the same except for these details:
+
+- **HumanA** takes the **Weapon** in its constructor, **HumanB** doesn't.
+- **HumanB** may **not always** have a **Weapon**, **HumanA** will **always** have one.
+
+**Files**: [`Makefile`](./ex03/Makefile), [`main.cpp`](./ex03/src/main.cpp), [`Weapon.cpp`](./ex03/src/Weapon.cpp), [`HumanA.cpp`](./ex03/src/HumanA.cpp), [`HumanB.cpp`](./ex03/src/HumanB.cpp), [`Weapon.hpp`](./ex03/includes/Weapon.hpp), [`HumanA.hpp`](./ex03/includes/HumanA.hpp), [`HumanB.hpp`](./ex03/includes/HumanB.hpp)
+
+**Forbidden functions**: None
+
+**Example of how it works**:
+
+<p align="center">
+  <a align="center">
+    <img src="./Resources/ex03.png" width="80%">
+  </a>
+</p>
 
 ## Exercise 04: Sed is for losers
 
-**Objective**:
+**Objective**: This program have to take three parameters in the following order: a **filename** and two strings, **s1** and **s2**.
 
 **Files**:
 
