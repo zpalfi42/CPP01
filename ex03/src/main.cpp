@@ -6,7 +6,7 @@
 int main( void )
 {
     {
-        Weapon  club = Weapon("");
+        Weapon  club = Weapon("Sword");
 
         HumanA  bob("Bob", club);
         bob.attack();
@@ -14,9 +14,10 @@ int main( void )
         bob.attack();
     }
     {
-        Weapon  club = Weapon("");
+        Weapon  club = Weapon("Gun");
 
         HumanB  jim("Jim");
+        jim.attack();
         jim.setWeapon(club);
         jim.attack();
         club.setType("some other type of club");
