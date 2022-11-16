@@ -6,9 +6,9 @@ int main()
 	std::string	*stringPTR = &str;
 	std::string	&stringREF = str;
 
-	std::cout << "Memoty addres of str: " << &str << std::endl;
-	std::cout << "Memoty addres of stringPTR: " << stringPTR << std::endl;
-	std::cout << "Memoty addres of stringREF: " << &stringREF << std::endl << std::endl;
+	std::cout << "Memory addres of str: " << &str << std::endl;
+	std::cout << "Memory addres of stringPTR: " << stringPTR << std::endl;
+	std::cout << "Memory addres of stringREF: " << &stringREF << std::endl << std::endl;
 
 	std::cout << "Value of str: " << str << std::endl;
 	std::cout << "Value pointed by stringPTR: " << *stringPTR << std::endl;
