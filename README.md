@@ -124,15 +124,28 @@ Then we have to implement two more classes: [**HumanA**](./ex03/include/HumanA.h
 
 ## Exercise 04: Sed is for losers
 
-**Objective**: This program have to take three parameters in the following order: a **filename** and two strings, **s1** and **s2**.
+**Objective**: This program have to take three parameters in the following order: a **filename** and two strings, **s1** and **s2**. When executed, the program must open the file **filename** and copy its contents replacing each ocurrence of **s1** by **s2**.
 
-**Files**:
+**Files**: [`Makefile`](./ex04/Makefile), [`main.cpp`](./ex04/src/main.cpp)
 
-**Forbidden functions**:
+**Forbidden functions**: `std::string::replace`
 
 ## Exercise 05: Harl 2.0
 
-**Objective**:
+**Objective**: The objective of this exercive is to create a program containing a class **Harl**. This class will have the following private member functions:
+
+- void debug( void );
+- void info( void );
+- void warning( void );
+- void error( void );
+
+This functions represents the differents levels of messsges that Harl have. Harl also have the public function member:
+
+- void complain( std::string level );
+
+Which will call the correct function depending on the level passed as parameter.
+The real objective of this exercice is to learn how to use the pointer to member functions, to avoid using a lot of if/else.
+
 
 **Files**:
 
